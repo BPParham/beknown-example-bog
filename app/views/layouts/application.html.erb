@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1><%= link_to "Blog", root_path %></h1>
+      <p>Welcome to my blog</p>
+
+      <%= form_tag(search_path, method: :get) do %>
+        <%= text_field_tag 'query', '', placeholder: 'Search' %>
+      <% end %>
+
+      <hr />
+
+      <% if user_signed_in? %>
+        <%= link_to "Admin", beknown.root_path %>
+        |
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path %>
+        |
+        <%= link_to "Sign up", new_user_registration_path %>
+      <% end %>
+    </header>
+
+    <section>
+      <%= yield %>
+    </section>
+  </div>
+</body>
+</html>
