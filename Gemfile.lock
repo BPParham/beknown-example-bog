@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/pch/beknown.git
+  remote: git://github.com/BPParham/beknown.git
   revision: 9f558757db57432b0b5bd4fe3fe1a5298096405f
   specs:
     beknown (0.0.1)

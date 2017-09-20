@@ -7,6 +7,6 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails'
 
-gem 'beknown', git: 'git://github.com/pch/beknown.git' # path: "../beknown/"
+gem 'beknown', git: 'git://github.com/BPParham/beknown.git' # path: "../beknown/"
 
 gem 'devise'
